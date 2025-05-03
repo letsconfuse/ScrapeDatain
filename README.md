@@ -1,7 +1,7 @@
 # YellowPages.in Data Scraper
 
 <p align="center">
-  <img src="image.png" alt="YellowPages Scraper GUI">
+  <img src="image01.png" alt="YellowPages Scraper GUI">
 </p>
 
 A simple Python application with a **Tkinter GUI** that uses **Selenium WebDriver (Microsoft Edge Chromium)** to scrape **business names, emails, and phone numbers** from [YellowPages.in](http://www.yellowpages.in).
@@ -26,6 +26,10 @@ A simple Python application with a **Tkinter GUI** that uses **Selenium WebDrive
 
 <p align="center">
   <img src="image02.png" alt="Working GUI Screenshot">
+</p>
+
+<p align="center">
+  <img src="image03.png" alt="Working GUI Screenshot">
 </p>
 
 *Above: A live screenshot of the scraper in action.*
