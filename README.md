@@ -89,6 +89,43 @@ Each row contains:
 
 ---
 
+## 📧 About onlyMails.py
+
+
+`onlyMails.py` is a simplified version of the scraper that focuses **only on collecting emails**.
+
+### 🟢 Benefits:
+
+* Lightweight and faster setup.
+* No GUI; just opens browser and collects emails.
+* Less dependencies and simpler code.
+
+### 🔴 Limitations:
+
+* **Emails only**: no name or phone collection.
+* No real-time status logging or progress UI.
+
+This version saves files as:
+
+```bash
+YYYYMMDD_HHMMSS.csv
+```
+
+Each row contains **just one email**:
+
+| Email                                               |
+| --------------------------------------------------- |
+| [example1@mail.com](mailto:example1@mail.com)       |
+| [example2@mail.com](mailto:example2@mail.com)       |
+| [info@company.com](mailto:info@company.com)         |
+| [contact@biz.com](mailto:contact@biz.com)           |
+| [sales@store.com](mailto:sales@store.com)           |
+| [support@helpdesk.com](mailto:support@helpdesk.com) |
+| [team@enterprise.com](mailto:team@enterprise.com)   |
+
+---
+
+
 ## ⚠️ Disclaimer
 
 🛑 **IMPORTANT: This tool is for educational purposes only.**
