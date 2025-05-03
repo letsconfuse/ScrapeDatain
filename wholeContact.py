@@ -110,10 +110,11 @@ def stop_scraping():
     save_to_csv(filename, collected_data)
     show_status(f"[DONE] {len(collected_data)} records saved to '{filename}'.")
 
-    if active_driver:
-        active_driver.quit()
-        active_driver = None
-        show_status("[INFO] Browser closed.")
+    # Add this block if you want to close the browser after save button
+    # if active_driver:
+    #     active_driver.quit()
+    #     active_driver = None
+    #     show_status("[INFO] Browser closed.")
 
 def clear_data():
     global collected_data
