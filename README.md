@@ -49,7 +49,7 @@ A simple Python application with a **Tkinter GUI** that uses **Selenium WebDrive
 3. Run the script:
 
    ```bash
-   python yellowpages_scraper.py
+   python wholeContact.py
    ```
 4. In the app:
 
@@ -59,6 +59,33 @@ A simple Python application with a **Tkinter GUI** that uses **Selenium WebDrive
    * Click **Clear Data** to reset collected results
 
 The scraper collects from **visible search results on the current page**—pagination is manual.
+
+---
+
+## 📂 Output
+
+Saved files are named as:
+
+```bash
+YYYYMMDD_HHMMSS_contacts.csv
+```
+
+Each row contains:
+
+| Name            | Email                                         | Phone Number |
+| --------------- | --------------------------------------------- | ------------ |
+| Business Name 1 | [example1@mail.com](mailto:example1@mail.com) | 1234567890   |
+| Business Name 2 | [example2@mail.com](mailto:example2@mail.com) | 9876543210   |
+| Business Name 3 | [info@company.com](mailto:info@company.com)   | 5551234567   |
+| Business Name 4 | [contact@biz.com](mailto:contact@biz.com)     | 4449876543   |
+| Business Name 5 | [sales@store.com](mailto:sales@store.com)     | 3332221111   |
+
+---
+
+## 📝 Customization
+
+* To auto-close the browser after saving, uncomment the related code in `stop_scraping()` function.
+* To change wait times, edit the `human_like_wait()` and scraping interval inside `start_scraping_loop()`.
 
 ---
 
