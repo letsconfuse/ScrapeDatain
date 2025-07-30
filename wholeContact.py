@@ -7,7 +7,7 @@ import os
 import random
 import datetime
 from selenium import webdriver
-from selenium.webdriver.edge.options import Options
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 
 # Globals
@@ -18,11 +18,13 @@ collected_data = []
 def human_like_wait():
     time.sleep(random.uniform(2, 4))
 
-def create_edge_browser():
+def create_chrome_browser():
     options = Options()
-    options.use_chromium = True
     options.add_argument("--disable-blink-features=AutomationControlled")
-    driver = webdriver.Edge(options=options)
+    options.add_argument("--start-maximized")
+    options.add_experimental_option("excludeSwitches", ["enable-automation"])
+    options.add_experimental_option('useAutomationExtension', False)
+    driver = webdriver.Chrome(options=options)
     return driver
 
 def save_to_csv(filename, data):
@@ -68,7 +70,7 @@ def open_selected_website():
 def open_browser_and_wait(url):
     global active_driver
     try:
-        active_driver = create_edge_browser()
+        active_driver = create_chrome_browser()
         active_driver.get(url)
         show_status("[INFO] Browser loaded. Select field and location, then click 'Scrape'.")
     except Exception as e:
